@@ -5,8 +5,17 @@
 {% endblock %}
 
 {% block body %}
-    <h2>Create a new evil plan</h2>
-    {# TODO: afficher le formulaire #}
+    <div class="create-plan">
+        <h2>Create a new evil plan</h2>
+        {{ form_start(wishForm) }}
+
+        {{ form_widget(wishForm) }}
+
+        <button>Chataniser</button>
+
+        {{ form_end(wishForm) }}
+    </div>
+
 
 {% endblock %}
 

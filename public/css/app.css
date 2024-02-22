@@ -62,26 +62,62 @@ main {
 
 main a {
     text-decoration: none;
-    color: #283618;
+    color: rgb(16, 13, 12);
 }
 .chatan {
-
     margin: 30px 0;
+    content: "";
+    display: block;
+    clear: both;
 }
 .chatan img {
     width: 210px;
-    border-radius: 20%;
-    margin: auto;
+    border-radius: 40%;
+    object-fit: cover;
+    float: left;
+    shape-outside: margin-box;
+    /*margin: auto;*/
+    margin-right: 10px;
 }
 
-.plan-list, .wish-details{
+.plan-list, .wish-details, .create-plan{
     width: 500px;
     margin: 10px auto 0;
     border-radius: 15px;
     padding: 20px 30px 40px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.9);
 }
 
+.create-plan h2{
+    font-size: 20px;
+    text-align: center;
+    /*margin-bottom: 20px;*/
+}
+
+.create-plan label{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.create-plan input, textarea {
+    display: block;
+    /*margin-bottom: 2rem;*/
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #2222224f;
+}
+
+.create-plan button{
+    text-align: center;
+    padding: 0.5rem 0.7rem;
+    margin-top: 1rem;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #2222224f;
+    cursor: pointer;
+    background-color: rgb(16, 13, 12);
+    color: rgb(142,14,0);
+}
 footer {
     padding: 2rem 0;
     text-align: center;

@@ -4,10 +4,10 @@
     <section class="plan-list">
         <h2>Chatan's evil plans</h2>
         {% for wish in wishes %}
-            <article>
+            <li>
                 <a href="{{ path('app_wish_list-details', {'id':wish.id}) }}" title="Wish details">{{ wish.title }}</a>
-                <p>{{ wish.description }}</p>
-            </article>
+            </li>
+
         {% endfor %}
     </section>
 
