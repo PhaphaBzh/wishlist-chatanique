@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} | Tests chataniques
+{% endblock %}
+
+{% block body %}
+    <h1>Tests chataniques à ne pas mettre entre toutes les pattes</h1>
+
+    {# créer une variable #}
+
+    <h2>{{ phraseChatanique }}</h2>
+
+    <h2>Tableau de nourriture chatanique</h2>
+
+    <h3>Nombre de nourriture : {{ nourritureChatanique | length }}</h3>
+    <p>{{ nourritureChatanique | join('/') }}</p>
+    {% for nourriture in nourritureChatanique %}
+        <li>{{ nourriture }}</li>
+    {% endfor %}
+
+
+    <h2>Objet chatanique</h2>
+    <div>
+        {% for key, val in bookChatanique %}
+            <div>
+                {{ key }} : {{ val }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

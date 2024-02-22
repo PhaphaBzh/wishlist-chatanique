@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>About Chatan...</h2>
+
+    <section class="chatan">
+        <img src="{{ asset('img/chatan.jpg') }}" alt="Chatan sur une poutre">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolorem error fugit id illo itaque laboriosam laborum laudantium odit officia quaerat quis quisquam repudiandae sapiente sed sequi sint, tenetur vel.</p>
+    </section>
+{% endblock %}
+
+{% block title %}
+    {{ parent() }} | About Chatan
+
+{% endblock %}
+

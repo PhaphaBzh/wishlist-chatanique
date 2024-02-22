@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} | Chatan's evil plans
+{% endblock %}
+
+{% block body %}
+    <section class="wish-details">
+        <h2>{{ wish.title }}</h2>
+        <div>Evil plan #{{ wish.id }}</div>
+        <div>What is it about : {{ wish.description }}</div>
+        <div>Created by : {{ wish.author }}</div>
+        <div>On : {{ wish.dateCreated | date('Y-m-d')}}</div>
+    </section>
+
+{% endblock %}
+
