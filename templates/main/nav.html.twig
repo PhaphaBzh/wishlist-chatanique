@@ -1,7 +1,20 @@
 <nav class="header-nav">
     <a href="{{ path('app_home') }}" title="Home">Hell</a>
+
+    {% if is_granted("ROLE_ADMIN") %}
     <a href="{{ path('app_test') }}" title="Chataniques Tests">Tests Chataniques</a>
+    <a href="{{ path('app_admin') }}" title="AdminAccess">Admin</a>
+    {% endif %}
+
     <a href="{{ path('app_infos') }}" title="About us">About Chatan</a>
     <a href="{{ path('app_wish_list') }}" title="Wishlist">Evil plans</a>
-    <a href="{{ path('app_wish_create') }}" title="Create plan">Add an evil plan</a>
+
+    {% if app.user %}
+        <a href="{{ path('app_wish_create') }}" title="Create plan">Add an evil plan</a>
+        <a href="{{ path('app_logout') }}" title="LogOut">Log out</a>
+        {% else %}
+            <a href="{{ path('app_register') }}" title="Register">Become a chatanist</a>
+            <a href="{{ path('app_login') }}" title="LogIn">Log in</a>
+    {% endif %}
+
 </nav>

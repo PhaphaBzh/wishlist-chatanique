@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rejoindre Chatan |
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="create-plan">
+        <h2>Register</h2>
+
+        {{ form_errors(registrationForm) }}
+
+        {{ form_start(registrationForm) }}
+
+        {{ form_widget(registrationForm) }}
+
+        <button type="submit" class="btn">Rejoindre Chatan</button>
+        {{ form_end(registrationForm) }}
+    </div>
+
+{% endblock %}
