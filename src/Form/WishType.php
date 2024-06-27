@@ -15,7 +15,7 @@ class WishType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
-                'label'=>'title'
+                'label'=>'title test'
             ])
             ->add('description', TextareaType::class)
             ->add('author', TextType::class)

@@ -11,7 +11,7 @@
 
     {% if app.user %}
         <a href="{{ path('app_wish_create') }}" title="Create plan">Add an evil plan</a>
-        <a href="{{ path('app_logout') }}" title="LogOut">Log out</a>
+        <a href="{{ path('app_logout') }}" title="LogOut">Log out ({{ app.user.username }})</a>
         {% else %}
             <a href="{{ path('app_register') }}" title="Register">Become a chatanist</a>
             <a href="{{ path('app_login') }}" title="LogIn">Log in</a>

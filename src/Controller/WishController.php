@@ -39,6 +39,9 @@ class WishController extends AbstractController
     public function createAWish(Request $request, EntityManagerInterface $entityManager) : Response
     {
         $wish = new Wish();
+        $currentUserUsername = $this->getUser()->getUserIdentifier();
+
+        $wish->setAuthor($currentUserUsername);
         $wish->setDateCreated(new \DateTime());
         $wish->setIsPublished(true);
 
